@@ -1,0 +1,94 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-rename-the-app-from-its-current-name-to-shoe-swapper-everywhere-it-appears-including-the-header-logo-in-layout-tsx-the-page-title-in-index-html-and-any-other-branding-references-across-the-app-update-all-copy-to-emphasize-trading-swapping-over-buying-and-selling-e-g-start-trading-instead-of-buy-now-swap-language-throughout",
+      "featureTitle": "Rename the app from its current name to 'Shoe Swapper' everywhere it appears — including the header logo in Layout.tsx, the page title in index.html, and any other branding references across the app. Update all copy to emphasize trading/swapping over buying and selling (e.g., 'Start Trading' instead of 'Buy Now', 'Swap' language throughout).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/pages/CreateListing.tsx",
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/Marketplace.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-retheme-the-entire-app-to-a-red-black-and-white-color-palette-replace-all-neon-electric-accent-colors-orange-green-etc-with-a-primary-red-accent-e-g-e11d48-or-similar-bold-red-pure-black-backgrounds-and-white-text-surfaces-update-frontend-src-index-css-css-custom-properties-frontend-tailwind-config-js-color-tokens-and-all-component-classes-consistently-so-the-street-culture-aesthetic-is-preserved-but-expressed-in-red-black-and-white-only",
+      "featureTitle": "Retheme the entire app to a red, black, and white color palette. Replace all neon/electric accent colors (orange, green, etc.) with a primary red accent (e.g., #E11D48 or similar bold red), pure black backgrounds, and white text/surfaces. Update frontend/src/index.css CSS custom properties, frontend/tailwind.config.js color tokens, and all component classes consistently so the street-culture aesthetic is preserved but expressed in red, black, and white only.",
+      "files": [
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/components/ListingCard.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/CreateListing.tsx",
+        "frontend/src/pages/Home.tsx",
+        "frontend/src/pages/Marketplace.tsx",
+        "frontend/src/pages/Profile.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-negotiation-tab-to-the-main-navigation-layout-tsx-and-create-a-new-negotiation-page-route-the-page-should-allow-users-to-send-and-view-simulated-messages-to-from-other-users-about-potential-shoe-trades-use-mock-demo-data-for-conversations-no-real-time-backend-required-display-a-list-of-conversation-threads-on-the-left-and-a-message-view-on-the-right-each-conversation-should-reference-a-shoe-listing-by-name-messages-should-be-stored-in-local-component-state-or-react-query-cache",
+      "featureTitle": "Add a 'Negotiation' tab to the main navigation (Layout.tsx) and create a new Negotiation page/route. The page should allow users to send and view simulated messages to/from other users about potential shoe trades. Use mock/demo data for conversations (no real-time backend required). Display a list of conversation threads on the left and a message view on the right. Each conversation should reference a shoe listing by name. Messages should be stored in local component state or React Query cache.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/pages/Negotiation.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-trading-focused-hero-image-to-the-home-page-place-the-generated-image-trading-hero-dim-1200x600-png-prominently-in-the-hero-section-of-frontend-src-pages-home-tsx-replacing-or-augmenting-the-current-hero-banner-background-serve-it-as-a-static-asset-from-frontend-public-assets-generated",
+      "featureTitle": "Add a trading-focused hero image to the Home page. Place the generated image (trading-hero.dim_1200x600.png) prominently in the hero section of frontend/src/pages/Home.tsx, replacing or augmenting the current hero banner background. Serve it as a static asset from frontend/public/assets/generated/.",
+      "files": [
+        "frontend/src/pages/Home.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

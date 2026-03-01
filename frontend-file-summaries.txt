@@ -1,0 +1,16 @@
+{
+  "frontend/src/index.css": "Global styles with red/black/white OKLCH color system, dark theme as default, red glow utilities, and Barlow Condensed display font.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with red/black/white brand color tokens, Barlow Condensed display font, red glow box shadows, and animation keyframes.",
+  "frontend/src/utils/pricing.ts": "Utility functions for calculating the 10% commission fee and formatting prices in USD from cents.",
+  "frontend/src/hooks/useAIAnalysis.ts": "Custom hook that simulates AI shoe analysis with a 2.2s delay, returning a random condition score (40–98) and authenticity verdict (75% authentic).",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations: fetching listings with filters, creating listings, fetching user profiles, and completing trades.",
+  "frontend/src/components/Layout.tsx": "App-wide layout rebranded as \"ShoeSwapper\" with red/black/white theme, Negotiation nav link added, and \"List for Trade\" CTA replacing old buy/sell language.",
+  "frontend/src/components/ListingCard.tsx": "Shoe listing card rebranded with red/black/white palette, red condition badges, red authenticity shield, and red-accented price breakdown.",
+  "frontend/src/pages/Home.tsx": "Landing page rebranded as ShoeSwapper with trading hero image background, swap/trade language throughout, red/black/white theme, and updated stats/features/CTA sections.",
+  "frontend/src/pages/Marketplace.tsx": "Marketplace browsing page that passes a single `ListingFilters` object to `useGetListings`, with condition range slider, authentic-only toggle, loading skeletons, and a responsive grid of `ListingCard` components styled in the red/black/white theme.",
+  "frontend/src/pages/CreateListing.tsx": "Multi-step listing creation flow (upload → AI analysis → review → publish → done) using `analyzeShoe` (correct hook method name) and passing `priceCents`/`conditionScore` as plain `number` values to match the `useCreateListing` mutation type.",
+  "frontend/src/pages/Profile.tsx": "Trader profile page with red/black/white theme, trade-focused stats, credibility bars in red, and swap-oriented copy.",
+  "frontend/src/App.tsx": "TanStack Router setup with routes for Home, Marketplace, CreateListing, Profile, and the new Negotiation page.",
+  "frontend/index.html": "HTML entry point with updated title \"Shoe Swapper\" and Google Fonts imports for Barlow Condensed and Inter.",
+  "frontend/src/pages/Negotiation.tsx": "New negotiation page with two-column layout showing mock trade conversations, message threads referencing shoe swaps, and a send-message input with local state management."
+}

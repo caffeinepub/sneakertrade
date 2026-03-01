@@ -1,0 +1,141 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Rebrand to Shoe Swapper, red/black/white theme, add negotiation tab, and trading hero image",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Rename the app from its current name to 'Shoe Swapper' everywhere it appears and update all copy to emphasize trading/swapping over buying and selling",
+      "acceptanceCriteria": [
+        "The header logo and site title read 'Shoe Swapper'",
+        "The HTML <title> tag in index.html reads 'Shoe Swapper'",
+        "CTAs and section headings use trade/swap language rather than buy/sell language",
+        "No references to the old app name remain"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update the <title> tag to read 'Shoe Swapper' instead of the current app name"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Replace the header logo text with 'Shoe Swapper' and update the 'List a Shoe' CTA button text to use swap/trade language (e.g., 'List for Trade' or 'Start Trading')"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Update hero banner headline and all CTAs to use trade/swap language instead of buy/sell language. Replace 'Buy Now' with 'Start Trading', update feature highlights and how-it-works section copy to emphasize swapping and trading"
+        },
+        {
+          "path": "frontend/src/pages/Marketplace.tsx",
+          "operation": "modify",
+          "description": "Update page heading and any buy/sell language to swap/trade terminology"
+        },
+        {
+          "path": "frontend/src/pages/CreateListing.tsx",
+          "operation": "modify",
+          "description": "Update all form labels, headings, and success messages to emphasize listing for trade/swap rather than selling"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Retheme the entire app to a red, black, and white color palette, replacing all neon/electric accent colors with bold red, pure black backgrounds, and white text",
+      "acceptanceCriteria": [
+        "Primary accent color is red; no neon orange, electric green, or blue accents remain",
+        "Backgrounds are black or very dark; text is white or light gray",
+        "Buttons, badges, borders, and highlights all use the red/black/white palette",
+        "Theme is applied consistently across Home, Marketplace, CreateListing, and Profile pages"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Replace all CSS custom property color values with the red/black/white palette. Set primary accent to bold red (e.g., #E11D48 or oklch equivalent), backgrounds to pure black or very dark gray, and text to white or light gray. Remove all neon/electric color variables (orange, green, blue accents)"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Update the extended color palette to use red/black/white only. Replace neon and electric color tokens with red accent variants, black/dark gray neutrals, and white/light gray for text. Ensure consistency with index.css custom properties"
+        },
+        {
+          "path": "frontend/src/components/ListingCard.tsx",
+          "operation": "modify",
+          "description": "Update badge colors (condition score, authenticity) and counterfeit warning banner to use the red/black/white palette. Replace any neon accent classes with red equivalents"
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Update hero section, feature highlight cards, and how-it-works section styling to use red/black/white theme consistently. Replace any neon border, background, or text accent classes"
+        },
+        {
+          "path": "frontend/src/pages/Marketplace.tsx",
+          "operation": "modify",
+          "description": "Update filter sidebar, listing grid, and button styling to use red/black/white palette. Replace any neon accent classes with red variants"
+        },
+        {
+          "path": "frontend/src/pages/CreateListing.tsx",
+          "operation": "modify",
+          "description": "Update form styling, step indicators, and button colors to match the red/black/white theme. Replace any neon progress indicators or accent colors with red variants"
+        },
+        {
+          "path": "frontend/src/pages/Profile.tsx",
+          "operation": "modify",
+          "description": "Update stat cards, rating stars, credibility section, and collection grid styling to use red/black/white palette consistently"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Update header, navigation links, CTA button, and footer styling to use the red/black/white theme. Replace any neon accent colors with red equivalents"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Add a 'Negotiation' tab to the main navigation and create a new Negotiation page with mock trade conversation functionality",
+      "acceptanceCriteria": [
+        "A 'Negotiation' link appears in the main navigation header",
+        "The Negotiation page shows a list of mock trade conversations",
+        "Selecting a conversation shows a message thread referencing a shoe listing",
+        "Users can type and 'send' a message (appended to local state)",
+        "The page is styled consistently with the red/black/white theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Negotiation.tsx",
+          "operation": "create",
+          "description": "Create a new Negotiation page component with a two-column layout: left sidebar showing a list of mock conversation threads (each referencing a shoe listing name), and right panel displaying the selected conversation's message thread with an input field to send new messages. Store conversations and messages in local component state. Use mock data for initial conversations. Style consistently with the red/black/white theme"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register the /negotiation route with the Negotiation page component in the TanStack Router configuration"
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add a 'Negotiation' navigation link to both desktop and mobile navigation menus, positioned between existing tabs and styled consistently with other nav links using the red/black/white theme"
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add a trading-focused hero image to the Home page hero section",
+      "acceptanceCriteria": [
+        "The home page hero section displays the trading image",
+        "The image is served from frontend/public/assets/generated/trading-hero.dim_1200x600.png",
+        "The image is responsive and does not break the layout on mobile or desktop",
+        "Overlay text and CTAs remain legible on top of the image"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Integrate the generated trading hero image (frontend/public/assets/generated/trading-hero.dim_1200x600.png) into the hero section as a background or prominent visual element. Ensure the image is responsive using appropriate CSS classes and that overlay text and CTAs remain legible with proper contrast. Add a dark overlay gradient if needed to maintain text readability"
+        }
+      ]
+    }
+  ]
+}

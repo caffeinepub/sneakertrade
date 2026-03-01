@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: oklch(0.98 0.002 0);
+    --foreground: oklch(0.08 0.005 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.08 0.005 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.08 0.005 0);
+    --primary: oklch(0.45 0.22 25);
+    --primary-foreground: oklch(0.98 0.002 0);
+    --secondary: oklch(0.94 0.005 0);
+    --secondary-foreground: oklch(0.12 0.005 0);
+    --muted: oklch(0.94 0.005 0);
+    --muted-foreground: oklch(0.45 0.01 0);
+    --accent: oklch(0.45 0.22 25);
+    --accent-foreground: oklch(0.98 0.002 0);
+    --destructive: oklch(0.45 0.22 25);
+    --destructive-foreground: oklch(0.98 0.002 0);
+    --border: oklch(0.88 0.005 0);
+    --input: oklch(0.88 0.005 0);
+    --ring: oklch(0.45 0.22 25);
+    --radius: 0.5rem;
+    --success: oklch(0.55 0.15 145);
+    --warning: oklch(0.75 0.15 75);
+  }
+
+  .dark {
+    --background: oklch(0.08 0.005 0);
+    --foreground: oklch(0.96 0.002 0);
+    --card: oklch(0.12 0.005 0);
+    --card-foreground: oklch(0.96 0.002 0);
+    --popover: oklch(0.12 0.005 0);
+    --popover-foreground: oklch(0.96 0.002 0);
+    --primary: oklch(0.55 0.22 25);
+    --primary-foreground: oklch(0.98 0.002 0);
+    --secondary: oklch(0.18 0.005 0);
+    --secondary-foreground: oklch(0.96 0.002 0);
+    --muted: oklch(0.18 0.005 0);
+    --muted-foreground: oklch(0.6 0.01 0);
+    --accent: oklch(0.55 0.22 25);
+    --accent-foreground: oklch(0.98 0.002 0);
+    --destructive: oklch(0.55 0.22 25);
+    --destructive-foreground: oklch(0.98 0.002 0);
+    --border: oklch(0.22 0.005 0);
+    --input: oklch(0.22 0.005 0);
+    --ring: oklch(0.55 0.22 25);
+    --success: oklch(0.6 0.15 145);
+    --warning: oklch(0.75 0.15 75);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Dark theme as default for the app */
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: oklch(0.08 0.005 0);
+  color: oklch(0.96 0.002 0);
+}
+
+@layer utilities {
+  .glow-red {
+    box-shadow: 0 0 20px oklch(0.55 0.22 25 / 0.4), 0 0 40px oklch(0.55 0.22 25 / 0.2);
+  }
+  .glow-red-sm {
+    box-shadow: 0 0 10px oklch(0.55 0.22 25 / 0.3);
+  }
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px oklch(0.55 0.22 25 / 0.25);
+  }
+  .text-gradient-red {
+    background: linear-gradient(135deg, oklch(0.65 0.22 25), oklch(0.45 0.22 25));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .border-red-glow {
+    border-color: oklch(0.55 0.22 25 / 0.5);
+    box-shadow: 0 0 0 1px oklch(0.55 0.22 25 / 0.2);
+  }
+}

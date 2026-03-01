@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "A shoe trading (swap-focused) website called Shoe Swapper with a 10% commission fee, AI-powered shoe authenticity verification and condition rating (0-100 scale) via photo upload, user profiles showing shoe collections and trade credibility ratings (0.0-5.0), and a negotiation/messaging tab for users to communicate about trades. Theme is red, black, and white with a street-culture aesthetic.",
+  "architectural_notes": [
+    "Commission model: 10% fee based on shoe sale price, should be clearly promoted in UI",
+    "AI features: photo-based condition scoring (0-100) and fake detection — likely mocked or third-party integrated",
+    "Platform focus shifted from buying/selling to peer-to-peer shoe trading/swapping"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Dynamic street-style scene of two people exchanging/trading sneakers in an urban setting, bold red and black color grading, high energy and premium feel (trading-hero.dim_1200x600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-landing-home-page-that-prominently-promotes-the-platform-s-10-commission-fee-model-explaining-that-the-fee-is-calculated-based-on-the-final-sale-price-of-the-shoe-display-this-as-a-key-trust-and-transparency-feature-with-a-clear-call-to-action-to-start-trading",
+      "title": "Create a landing/home page that prominently promotes the platform's 10% commission fee model, explaining that the fee is calculated based on the final sale price of the shoe. Display this as a key trust and transparency feature with a clear call-to-action to start trading.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-shoe-listing-creation-flow-where-sellers-can-upload-a-photo-of-their-shoe-the-photo-upload-triggers-a-simulated-ai-analysis-that-returns-1-a-condition-rating-on-a-scale-of-0-100-and-2-an-authenticity-verdict-authentic-likely-fake-to-help-prevent-scam-listings-display-both-results-clearly-before-the-listing-is-published",
+      "title": "Build a shoe listing creation flow where sellers can upload a photo of their shoe. The photo upload triggers a simulated AI analysis that returns: (1) a condition rating on a scale of 0–100, and (2) an authenticity verdict (Authentic / Likely Fake) to help prevent scam listings. Display both results clearly before the listing is published.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-marketplace-browsing-page-that-displays-active-shoe-listings-as-cards-each-card-must-show-the-shoe-photo-name-asking-price-condition-score-0-100-authenticity-badge-authentic-likely-fake-and-the-calculated-10-commission-fee-shown-as-a-separate-line-include-basic-filtering-by-condition-score-range-and-authenticity-status",
+      "title": "Build a marketplace browsing page that displays active shoe listings as cards. Each card must show the shoe photo, name, asking price, condition score (0–100), authenticity badge (Authentic / Likely Fake), and the calculated 10% commission fee (shown as a separate line). Include basic filtering by condition score range and authenticity status.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-user-profile-tab-page-that-displays-the-user-s-shoe-collection-listings-they-have-posted-or-acquired-and-their-trade-credibility-rating-on-a-scale-of-0-0-to-5-0-derived-from-their-previous-completed-trades-show-the-total-number-of-trades-completed-alongside-the-rating",
+      "title": "Implement a user profile tab/page that displays the user's shoe collection (listings they have posted or acquired), and their trade credibility rating on a scale of 0.0 to 5.0 derived from their previous completed trades. Show the total number of trades completed alongside the rating.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-bold-street-culture-inspired-visual-theme-for-the-entire-app-dark-backgrounds-high-contrast-accent-colors-e-g-neon-orange-or-electric-green-clean-sans-serif-typography-and-a-grid-forward-layout-that-feels-premium-and-urban-apply-this-theme-consistently-across-all-pages-and-components",
+      "title": "Design a bold, street-culture-inspired visual theme for the entire app — dark backgrounds, high-contrast accent colors (e.g., neon orange or electric green), clean sans-serif typography, and a grid-forward layout that feels premium and urban. Apply this theme consistently across all pages and components.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-rename-the-app-from-its-current-name-to-shoe-swapper-everywhere-it-appears-including-the-header-logo-in-layout-tsx-the-page-title-in-index-html-and-any-other-branding-references-across-the-app-update-all-copy-to-emphasize-trading-swapping-over-buying-and-selling-e-g-start-trading-instead-of-buy-now-swap-language-throughout",
+      "title": "Rename the app from its current name to 'Shoe Swapper' everywhere it appears — including the header logo in Layout.tsx, the page title in index.html, and any other branding references across the app. Update all copy to emphasize trading/swapping over buying and selling (e.g., 'Start Trading' instead of 'Buy Now', 'Swap' language throughout).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-retheme-the-entire-app-to-a-red-black-and-white-color-palette-replace-all-neon-electric-accent-colors-orange-green-etc-with-a-primary-red-accent-e-g-e11d48-or-similar-bold-red-pure-black-backgrounds-and-white-text-surfaces-update-frontend-src-index-css-css-custom-properties-frontend-tailwind-config-js-color-tokens-and-all-component-classes-consistently-so-the-street-culture-aesthetic-is-preserved-but-expressed-in-red-black-and-white-only",
+      "title": "Retheme the entire app to a red, black, and white color palette. Replace all neon/electric accent colors (orange, green, etc.) with a primary red accent (e.g., #E11D48 or similar bold red), pure black backgrounds, and white text/surfaces. Update frontend/src/index.css CSS custom properties, frontend/tailwind.config.js color tokens, and all component classes consistently so the street-culture aesthetic is preserved but expressed in red, black, and white only.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-negotiation-tab-to-the-main-navigation-layout-tsx-and-create-a-new-negotiation-page-route-the-page-should-allow-users-to-send-and-view-simulated-messages-to-from-other-users-about-potential-shoe-trades-use-mock-demo-data-for-conversations-no-real-time-backend-required-display-a-list-of-conversation-threads-on-the-left-and-a-message-view-on-the-right-each-conversation-should-reference-a-shoe-listing-by-name-messages-should-be-stored-in-local-component-state-or-react-query-cache",
+      "title": "Add a 'Negotiation' tab to the main navigation (Layout.tsx) and create a new Negotiation page/route. The page should allow users to send and view simulated messages to/from other users about potential shoe trades. Use mock/demo data for conversations (no real-time backend required). Display a list of conversation threads on the left and a message view on the right. Each conversation should reference a shoe listing by name. Messages should be stored in local component state or React Query cache.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-trading-focused-hero-image-to-the-home-page-place-the-generated-image-trading-hero-dim-1200x600-png-prominently-in-the-hero-section-of-frontend-src-pages-home-tsx-replacing-or-augmenting-the-current-hero-banner-background-serve-it-as-a-static-asset-from-frontend-public-assets-generated",
+      "title": "Add a trading-focused hero image to the Home page. Place the generated image (trading-hero.dim_1200x600.png) prominently in the hero section of frontend/src/pages/Home.tsx, replacing or augmenting the current hero banner background. Serve it as a static asset from frontend/public/assets/generated/.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Shoe trading marketplace with 10% commission fee prominently displayed",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Photo upload feature with AI-generated condition rating on a 0-100 scale",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "AI authenticity verification from uploaded photo to detect fake/counterfeit shoes",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "User profile tab showing shoe collection and trade credibility rating (0.0 to 5.0)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Rename app to 'Shoe Swapper' and update branding/colors to red, black, and white",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add a negotiation tab where users can message each other about trades",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a trading-focused image on the home page hero section",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "SneakerTrade",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

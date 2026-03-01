@@ -1,0 +1,104 @@
+{
+  "kind": "build_request",
+  "title": "Rebrand to Shoe Swapper, red/black/white theme, add negotiation tab, and trading hero image",
+  "projectName": "Shoe Swapper",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Rename the app from its current name to 'Shoe Swapper' everywhere it appears — including the header logo in Layout.tsx, the page title in index.html, and any other branding references across the app. Update all copy to emphasize trading/swapping over buying and selling (e.g., 'Start Trading' instead of 'Buy Now', 'Swap' language throughout).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change the name to shoe swapper",
+          "focus more on trading than buying and selling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The header logo and site title read 'Shoe Swapper'",
+        "The HTML <title> tag in index.html reads 'Shoe Swapper'",
+        "CTAs and section headings use trade/swap language rather than buy/sell language",
+        "No references to the old app name remain"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Retheme the entire app to a red, black, and white color palette. Replace all neon/electric accent colors (orange, green, etc.) with a primary red accent (e.g., #E11D48 or similar bold red), pure black backgrounds, and white text/surfaces. Update frontend/src/index.css CSS custom properties, frontend/tailwind.config.js color tokens, and all component classes consistently so the street-culture aesthetic is preserved but expressed in red, black, and white only.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "change the colors to red black and white",
+          "Keep the template"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary accent color is red; no neon orange, electric green, or blue accents remain",
+        "Backgrounds are black or very dark; text is white or light gray",
+        "Buttons, badges, borders, and highlights all use the red/black/white palette",
+        "Theme is applied consistently across Home, Marketplace, CreateListing, and Profile pages"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Add a 'Negotiation' tab to the main navigation (Layout.tsx) and create a new Negotiation page/route. The page should allow users to send and view simulated messages to/from other users about potential shoe trades. Use mock/demo data for conversations (no real-time backend required). Display a list of conversation threads on the left and a message view on the right. Each conversation should reference a shoe listing by name. Messages should be stored in local component state or React Query cache.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Create a negotiation tab to message other users"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Negotiation' link appears in the main navigation header",
+        "The Negotiation page shows a list of mock trade conversations",
+        "Selecting a conversation shows a message thread referencing a shoe listing",
+        "Users can type and 'send' a message (appended to local state)",
+        "The page is styled consistently with the red/black/white theme"
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add a trading-focused hero image to the Home page. Place the generated image (trading-hero.dim_1200x600.png) prominently in the hero section of frontend/src/pages/Home.tsx, replacing or augmenting the current hero banner background. Serve it as a static asset from frontend/public/assets/generated/.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "on the home page add a image of the trading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The home page hero section displays the trading image",
+        "The image is served from frontend/public/assets/generated/trading-hero.dim_1200x600.png",
+        "The image is responsive and does not break the layout on mobile or desktop",
+        "Overlay text and CTAs remain legible on top of the image"
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not alter immutable paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui",
+    "Keep all existing features (landing page, listing creation, marketplace, user profile) fully functional",
+    "Keep the overall layout/template structure intact — only rebrand and retheme"
+  ],
+  "nonGoals": [
+    "Real-time messaging or WebSocket-based chat",
+    "Backend persistence for negotiation messages",
+    "Removing or replacing the AI condition/authenticity analysis feature",
+    "Changing the 10% commission fee logic"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Dynamic street-style scene of two people exchanging/trading sneakers in an urban setting, bold red and black color grading, high energy and premium feel (trading-hero.dim_1200x600.png)"
+    ],
+    "edits": []
+  }
+}
